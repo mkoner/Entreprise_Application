@@ -21,9 +21,9 @@
 
 	<bean id="logger" class="integration.LoggerImpl"/>
 	-->
-	<!--
 	<context:annotation-config/>
-
+	<!--
 	<context:component-scan base-package="service, integration, data"/>
 	-->
+	<context:component-scan base-package="*"/>
 </beans>

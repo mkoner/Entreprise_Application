@@ -2,7 +2,7 @@ package integration;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class EmailSenderImpl implements EmailSender {
 
 	String outgoingMailServer = "smtp.acme.com";

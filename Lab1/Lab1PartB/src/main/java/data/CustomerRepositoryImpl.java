@@ -2,7 +2,10 @@ package data;
 
 import domain.Customer;
 import integration.Logger;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class CustomerRepositoryImpl implements CustomerRepository {
 
 	private Logger logger;

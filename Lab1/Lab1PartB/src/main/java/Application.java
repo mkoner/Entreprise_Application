@@ -1,6 +1,7 @@
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import service.CustomerService;
+import service.CustomerServiceImpl;
 
 public class Application {
 
@@ -9,7 +10,7 @@ public class Application {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"springconfig.xml");
 
-		CustomerService customerService = context.getBean("customerService",
+		CustomerService customerService = context.getBean(
 				CustomerService.class);
 
 		customerService.addCustomer("Frank Brown", "fbrown@acme.com",

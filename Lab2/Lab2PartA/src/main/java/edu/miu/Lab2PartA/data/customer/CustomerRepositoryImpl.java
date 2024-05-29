@@ -2,8 +2,10 @@ package edu.miu.Lab2PartA.data.customer;
 
 import edu.miu.Lab2PartA.domain.Customer;
 import edu.miu.Lab2PartA.integration.Logger;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
+@Profile("production")
 @Repository
 public class CustomerRepositoryImpl implements CustomerRepository {
 

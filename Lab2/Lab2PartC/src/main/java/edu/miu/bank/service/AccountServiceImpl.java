@@ -1,27 +1,26 @@
 package edu.miu.bank.service;
 
-import bank.domain.Account;
-import bank.domain.Customer;
-import bank.integration.jms.JMSSender;
-import bank.integration.jms.JMSSenderImpl;
-import bank.integration.logging.Logger;
-import bank.integration.logging.LoggerImpl;
-import bank.repository.AccountRepository;
-import bank.repository.AccountRepositoryImpl;
+import edu.miu.bank.domain.Account;
+import edu.miu.bank.domain.Customer;
+import edu.miu.bank.integration.jms.JMSSender;
+import edu.miu.bank.integration.logging.Logger;
+import edu.miu.bank.repository.AccountRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
+@Service
 public class AccountServiceImpl implements AccountService {
 	private AccountRepository accountRepository;
 	private CurrencyConverter currencyConverter;
 	private JMSSender jmsSender;
 	private Logger logger;
 	
-	public AccountServiceImpl() {
-		accountRepository = new AccountRepositoryImpl();
-		currencyConverter= new CurrencyConverterImpl();
-		jmsSender =  new JMSSenderImpl();
-		logger = new LoggerImpl();
+	public AccountServiceImpl(AccountRepository accountRepository, CurrencyConverter currencyConverter, JMSSender jmsSender, Logger logger) {
+		this.accountRepository = accountRepository;
+		this.currencyConverter = currencyConverter;
+		this.jmsSender = jmsSender;
+		this.logger = logger;
 	}
 
 	public Account createAccount(long accountNumber, String customerName) {

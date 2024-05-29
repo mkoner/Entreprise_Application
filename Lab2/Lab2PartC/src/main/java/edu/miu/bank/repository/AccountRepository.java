@@ -1,6 +1,6 @@
 package edu.miu.bank.repository;
 
-import bank.domain.Account;
+import edu.miu.bank.domain.Account;
 
 import java.util.Collection;
 

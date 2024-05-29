@@ -1,6 +1,8 @@
 package edu.miu.bank.service;
 
+import org.springframework.stereotype.Service;
 
+@Service
 public class CurrencyConverterImpl implements CurrencyConverter{
 
     public double euroToDollars (double amount){

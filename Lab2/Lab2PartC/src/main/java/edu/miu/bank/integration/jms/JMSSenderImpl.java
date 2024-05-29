@@ -1,6 +1,8 @@
 package edu.miu.bank.integration.jms;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class JMSSenderImpl implements JMSSender{
 	
 	public void sendJMSMessage (String text){

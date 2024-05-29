@@ -1,10 +1,12 @@
 package edu.miu.bank.repository;
 
-import bank.domain.Account;
+import edu.miu.bank.domain.Account;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
+@Repository
 public class AccountRepositoryImpl implements AccountRepository  {
 	Collection<Account> accountlist = new ArrayList<>();
 

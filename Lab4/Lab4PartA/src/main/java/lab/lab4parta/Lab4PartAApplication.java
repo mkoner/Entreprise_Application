@@ -1,5 +1,6 @@
 package lab.lab4parta;
 
+import lab.lab4parta.domain.Book;
 import lab.lab4parta.domain.Department;
 import lab.lab4parta.domain.Employee;
 import lab.lab4parta.repository.DepartmentRepository;
@@ -26,6 +27,8 @@ public class Lab4PartAApplication implements CommandLineRunner {
 
         System.out.println("Fetch department from DB");
         departmentRepository.findAll().forEach(System.out::println);
+
+        Book book = new Book("book", "author");
 
     }
 }

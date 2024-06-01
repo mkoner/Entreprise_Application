@@ -1,18 +1,25 @@
 package domain;
 
+import jakarta.persistence.*;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
-
+@Entity
 public class Customer {
+	@Id
+	@GeneratedValue
+	private int id;
 
 	private String firstName;
 
 	private String lastName;
 
+	@OneToOne(cascade = CascadeType.ALL)
 	private Address address;
 
+	@OneToMany(mappedBy = "customer")
 	private Collection<Order> theOrders = new ArrayList<>();
 
 	public Customer() {

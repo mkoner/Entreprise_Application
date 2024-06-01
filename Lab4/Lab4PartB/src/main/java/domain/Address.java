@@ -1,6 +1,14 @@
 package domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class Address {
+	@Id
+	@GeneratedValue
+	private int id;
 
 	private String street;
 
@@ -13,6 +21,10 @@ public class Address {
 		this.street = street;
 		this.city = city;
 		this.zip = zip;
+	}
+
+	public Address() {
+
 	}
 
 	public String getStreet() {

@@ -1,11 +1,18 @@
 package domain;
 
+import jakarta.persistence.*;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
-
+@Entity
+@Table(name = "order_table")
 public class Order {
+
+	@Id
+	@GeneratedValue
+	private int id;
 
 	private String orderNumber;
 
@@ -13,8 +20,14 @@ public class Order {
 
 	private String status;
 
+	@ManyToOne(cascade = CascadeType.PERSIST)
+//	@JoinTable(name = "customer_order",
+//			joinColumns = {@JoinColumn(name = "customer_id")},
+//			inverseJoinColumns = {@JoinColumn(name = "order_id")})
+	@JoinColumn
 	private Customer customer;
 
+	@OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
 	private Collection<OrderLine> orderLines = new ArrayList<>();
 
 	public Order() {

@@ -1,16 +1,17 @@
 package edu.miu.bank.service;
 
 import edu.miu.bank.domain.Account;
+import edu.miu.bank.service.dto.AccountDTO;
 
 import java.util.Collection;
 
 public interface AccountService {
 
-    public Account createAccount(long accountNumber, String customerName);
+    public AccountDTO createAccount(long accountNumber, String customerName);
 
-    public Account getAccount(long accountNumber);
+    public AccountDTO getAccount(long accountNumber);
 
-    public Collection<Account> getAllAccounts();
+    public Collection<AccountDTO> getAllAccounts();
 
     public void deposit (long accountNumber, double amount);
 

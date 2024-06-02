@@ -4,6 +4,9 @@ import edu.miu.bank.domain.Account;
 import edu.miu.bank.domain.AccountEntry;
 import edu.miu.bank.domain.Customer;
 import edu.miu.bank.service.AccountService;
+import edu.miu.bank.service.dto.AccountDTO;
+import edu.miu.bank.service.dto.AccountEntryDTO;
+import edu.miu.bank.service.dto.CustomerDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -41,16 +44,16 @@ public class Lab2PartCApplication implements CommandLineRunner {
 		accountService.transferFunds(4253892, 1263862, 100, "payment of invoice 10232");
 
 		// show balances
-		Collection<Account> accountlist = accountService.getAllAccounts();
-		Customer customer = null;
-		for (Account account : accountlist) {
+		Collection<AccountDTO> accountlist = accountService.getAllAccounts();
+		CustomerDTO customer = null;
+		for (AccountDTO account : accountlist) {
 			customer = account.getCustomer();
 			System.out.println("Statement for Account: " + account.getAccountNumber());
 			System.out.println("Account Holder: " + customer.getName());
 			System.out.println("-Date-------------------------"
 					+ "-Description------------------"
 					+ "-Amount-------------");
-			for (AccountEntry entry : account.getEntryList()) {
+			for (AccountEntryDTO entry : account.getAccountEntries()) {
 				System.out.printf("%30s%30s%20.2f\n", entry.getDate()
 						.toString(), entry.getDescription(), entry.getAmount());
 			}

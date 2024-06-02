@@ -1,20 +1,24 @@
 package edu.miu.bank.domain;
 
+import jakarta.persistence.*;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
-
+@Entity
 public class Account {
-
+	@Id
 	long accountNumber;
 
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinColumn(name = "account_number")
 	Collection<AccountEntry> entryList = new ArrayList<AccountEntry>();
 
+	@OneToOne(cascade = CascadeType.ALL)
 	Customer customer;
 
-	public Account (long accountnr){
-		this.accountNumber = accountnr;
+	public Account() {
 	}
 
 	public long getAccountNumber() {
@@ -66,4 +70,16 @@ public class Account {
 		return entryList;
 	}
 
+	public void setEntryList(Collection<AccountEntry> entryList) {
+		this.entryList = entryList;
+	}
+
+	@Override
+	public String toString() {
+		return "Account{" +
+				"accountNumber=" + accountNumber +
+				", entryList=" + entryList +
+				", customer=" + customer +
+				'}';
+	}
 }

@@ -1,8 +1,16 @@
 package edu.miu.bank.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
 import java.util.Date;
 
+@Entity
 public class AccountEntry {
+	@Id
+	@GeneratedValue
+	private int id;
 
 	private Date date;
 
@@ -64,6 +72,13 @@ public class AccountEntry {
 
 	public void setFromPersonName(String fromPersonName) {
 		this.fromPersonName = fromPersonName;
+	}
+
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 }

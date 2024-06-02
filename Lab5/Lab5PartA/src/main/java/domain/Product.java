@@ -1,13 +1,12 @@
 package domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
-public class Product {
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Product {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.TABLE)
 	private int id;
 
 	private String name;

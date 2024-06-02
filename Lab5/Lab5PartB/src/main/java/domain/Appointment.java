@@ -1,14 +1,25 @@
 package domain;
 
 
+import jakarta.persistence.*;
+
+@Entity
 public class Appointment {
+	@Id
+	@GeneratedValue
+	private int id;
 
 	private String appDate;
 
+	@OneToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "patient")
 	private Patient patient;
 
+	@Embedded
 	private Payment payment;
 
+	@OneToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "doctor")
 	private Doctor doctor;
 
 	public Appointment() {
@@ -54,4 +65,14 @@ public class Appointment {
 		this.doctor = doctor;
 	}
 
+	@Override
+	public String toString() {
+		return "Appointment{" +
+				"id=" + id +
+				", appDate='" + appDate + '\'' +
+				", patient=" + patient +
+				", payment=" + payment +
+				", doctor=" + doctor +
+				'}';
+	}
 }

@@ -15,7 +15,7 @@ public class Account {
 	@JoinColumn(name = "account_number")
 	Collection<AccountEntry> entryList = new ArrayList<AccountEntry>();
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
 	Customer customer;
 
 	public Account() {

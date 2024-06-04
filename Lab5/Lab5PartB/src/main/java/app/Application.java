@@ -4,6 +4,7 @@ import domain.Appointment;
 import domain.Doctor;
 import domain.Patient;
 import domain.Payment;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -15,6 +16,7 @@ import repository.AppointmentRepository;
 @SpringBootApplication
 @EnableJpaRepositories("repository")
 @EntityScan("domain")
+@Transactional
 public class Application implements CommandLineRunner{
 	@Autowired
 	private AppointmentRepository appointmentRepository;
@@ -52,6 +54,8 @@ public class Application implements CommandLineRunner{
 
 		appointmentRepository.save(appointment1);
 		appointmentRepository.save(appointment2);
+//		appointmentRepository.save(appointment3);
+//		appointmentRepository.save(appointment4);
 
 		appointmentRepository.findAll().forEach(System.out::println);
 

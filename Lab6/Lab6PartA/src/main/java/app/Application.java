@@ -7,7 +7,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import repository.CustomerRepository;
 import repository.OrderRepository;
+import repository.CDRepository;
+import repository.ProductRepository;
 
 @SpringBootApplication
 @EnableJpaRepositories("repository")
@@ -15,6 +18,12 @@ import repository.OrderRepository;
 public class Application implements CommandLineRunner{
 	@Autowired
 	private OrderRepository orderRepository;
+	@Autowired
+	private CustomerRepository customerRepository;
+	@Autowired
+	private ProductRepository productRepository;
+	@Autowired
+	private CDRepository cdRepository;
 	
 
 	public static void main(String[] args) {
@@ -52,6 +61,14 @@ public class Application implements CommandLineRunner{
 
 		orderRepository.findAll().forEach(Application::printOrder);
 
+		Product cd1 = new CD("The best of U2", "Album from 1995", 12.98, "U2");
+		Product cd2 = new CD("OK", "Album from 1995", 5.98, "U2");
+		Product cd3 = new CD("OKAY", "Album from 1995", 1.98, "U2");
+		productRepository.save(cd1);
+		productRepository.save(cd2);
+		productRepository.save(cd3);
+		System.out.println("Give all CD’s from U2 with a price smaller than 10 euro ");
+		cdRepository.findByArtistAndPriceLessThan("U2", 10.0).forEach(System.out::println);
 	}
 
 	public static void printOrder(Order order) {

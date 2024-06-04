@@ -16,4 +16,14 @@ public class CD extends Product{
     public void setArtist(String artist) {
         this.artist = artist;
     }
+    @Override
+    public String toString() {
+        return "CD{" +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
+                ", description='" + getDescription() + '\'' +
+                ", price=" + getPrice() +
+                ", artist='" + artist + '\'' +
+                '}';
+    }
 }

@@ -45,7 +45,7 @@ public class Application implements CommandLineRunner{
 //		product2.setPrice(12.98);
 		OrderLine ol2 = new OrderLine(4, product2);
 
-		Order o1 = new Order("234743", "12/10/06", "open");
+		Order o1 = new Order("234743", "12/10/06", "closed");
 		o1.addOrderLine(ol1);
 		o1.addOrderLine(ol2);
 
@@ -85,6 +85,18 @@ public class Application implements CommandLineRunner{
 
 		System.out.println("Get all CD’s from U2 with using named query");
 		cdRepository.findByArtist("U2").forEach(System.out::println);
+
+		System.out.println("Closed orders using JPQL Query");
+		orderRepository.listOfOrderNumbersByStatus("closed").forEach(System.out::println);
+
+		System.out.println("Get the first and lastnames of all customers who live in New York ");
+		customerRepository.getCustomerByCity("New york").forEach(System.out::println);
+
+		System.out.println("Number of Orders in new york" + orderRepository.countByCity("New york"));
+		System.out.println("Order numbers: " + orderRepository.orderNumbersByCity("New york"));
+
+		System.out.println("Get all CD’s from U2 with a price smaller than 10 euro using JPQL Query");
+		cdRepository.findByArtistAndPriceLessThanUsingQuery("U2", 10.0).forEach(System.out::println);
 	}
 
 	public static void printOrder(Order order) {

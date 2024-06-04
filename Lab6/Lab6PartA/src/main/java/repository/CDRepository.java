@@ -12,4 +12,6 @@ public interface CDRepository extends JpaRepository<CD, Integer> {
     List<CD> findByArtist(@Param("artist") String artist);
     @Query("select cd from CD cd where cd.artist = :artist and cd.price < :price")
     List<CD> findByArtistAndPriceLessThanUsingQuery(String artist, Double price);
+    @Query(value = "select * from CD where artist = :artist", nativeQuery = true)
+    List<CD> findByArtistUsingNativeQuery(String artist);
 }

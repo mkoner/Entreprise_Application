@@ -1,5 +1,6 @@
 package repository;
 
+import domain.Address;
 import domain.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

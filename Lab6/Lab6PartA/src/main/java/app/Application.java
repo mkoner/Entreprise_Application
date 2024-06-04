@@ -7,10 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import repository.CustomerRepository;
-import repository.OrderRepository;
-import repository.CDRepository;
-import repository.ProductRepository;
+import repository.*;
 
 @SpringBootApplication
 @EnableJpaRepositories("repository")
@@ -24,6 +21,8 @@ public class Application implements CommandLineRunner{
 	private ProductRepository productRepository;
 	@Autowired
 	private CDRepository cdRepository;
+	@Autowired
+	AddressRepository addressRepository;
 	
 
 	public static void main(String[] args) {
@@ -97,6 +96,11 @@ public class Application implements CommandLineRunner{
 
 		System.out.println("Get all CD’s from U2 with a price smaller than 10 euro using JPQL Query");
 		cdRepository.findByArtistAndPriceLessThanUsingQuery("U2", 10.0).forEach(System.out::println);
+
+		System.out.println("Get all address in new york");
+		addressRepository.getAddressByCity("New york").forEach(System.out::println);
+		System.out.println("All CD of U2 using native query");
+		cdRepository.findByArtistUsingNativeQuery("U2").forEach(System.out::println);
 	}
 
 	public static void printOrder(Order order) {

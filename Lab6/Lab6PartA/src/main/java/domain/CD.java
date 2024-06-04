@@ -1,8 +1,10 @@
 package domain;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.NamedQuery;
 
 @Entity
+@NamedQuery(name = "CD.getCDByArtist", query = "select cd from CD cd where cd.artist = :artist")
 public class CD extends Product{
     private String artist;
     public CD() {}

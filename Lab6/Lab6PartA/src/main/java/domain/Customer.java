@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.Collections;
 
 @Entity
+@NamedQuery(name = "Customer.getByCountry", query = "select c from Customer c where c.address.country = :country")
 public class Customer {
 	@Id
 	@GeneratedValue
@@ -26,10 +27,10 @@ public class Customer {
 	}
 
 	public Customer(String firstName, String lastName, String street,
-					String city, String zip) {
+					String city, String zip, String country) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.address = new Address(street, city, zip);
+		this.address = new Address(street, city, zip, country);
 	}
 
 
@@ -69,4 +70,13 @@ public class Customer {
 		return removed;
 	}
 
+	@Override
+	public String toString() {
+		return "Customer{" +
+				"id=" + id +
+				", firstName='" + firstName + '\'' +
+				", lastName='" + lastName + '\'' +
+				", address=" + address +
+				'}';
+	}
 }

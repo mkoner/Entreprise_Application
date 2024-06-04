@@ -15,16 +15,29 @@ public class Address {
 	private String city;
 
 	private String zip;
+
+	private String country;
 	
-	public Address(String street, String city, String zip) {
+	public Address(String street, String city, String zip, String country) {
 		super();
 		this.street = street;
 		this.city = city;
 		this.zip = zip;
+		this.country = country;
 	}
 
 	public Address() {
+	}
+	public int getId() {
+		return id;
+	}
 
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 	public String getStreet() {
@@ -51,4 +64,14 @@ public class Address {
 		this.zip = zip;
 	}
 
+	@Override
+	public String toString() {
+		return "Address{" +
+				"id=" + id +
+				", street='" + street + '\'' +
+				", city='" + city + '\'' +
+				", zip='" + zip + '\'' +
+				", country='" + country + '\'' +
+				'}';
+	}
 }

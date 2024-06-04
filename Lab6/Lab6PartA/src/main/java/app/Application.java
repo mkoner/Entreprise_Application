@@ -50,9 +50,15 @@ public class Application implements CommandLineRunner{
 		o1.addOrderLine(ol2);
 
 		Customer c1 = new Customer("Frank", "Brown", "Mainstreet 1",
-				"New york", "43221");
+				"New york", "43221", "USA");
+		Customer c2 = new Customer("Ben", "Badi", "Mainstreet 1",
+				"Abidjan", "43221", "Cote d'Ivoire");
+		Customer c3 = new Customer("Anna", "Brown", "Mainstreet 1",
+				"New york", "43221", "USA");
 		c1.addOrder(o1);
 		o1.setCustomer(c1);
+		customerRepository.save(c2);
+		customerRepository.save(c3);
 
 
 		printOrder(o1);
@@ -60,6 +66,10 @@ public class Application implements CommandLineRunner{
 		orderRepository.save(o1);
 
 		orderRepository.findAll().forEach(Application::printOrder);
+
+
+		System.out.println("All customer");
+		customerRepository.findAll().forEach(System.out::println);
 
 		Product cd1 = new CD("The best of U2", "Album from 1995", 12.98, "U2");
 		Product cd2 = new CD("OK", "Album from 1995", 5.98, "U2");
@@ -69,6 +79,12 @@ public class Application implements CommandLineRunner{
 		productRepository.save(cd3);
 		System.out.println("Give all CD’s from U2 with a price smaller than 10 euro ");
 		cdRepository.findByArtistAndPriceLessThan("U2", 10.0).forEach(System.out::println);
+
+		System.out.println("Get all customer from USA using named query");
+		customerRepository.getByCountry("USA").forEach(System.out::println);
+
+		System.out.println("Get all CD’s from U2 with using named query");
+		cdRepository.findByArtist("U2").forEach(System.out::println);
 	}
 
 	public static void printOrder(Order order) {

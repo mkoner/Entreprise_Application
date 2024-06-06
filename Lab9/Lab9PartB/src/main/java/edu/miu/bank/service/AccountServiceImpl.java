@@ -32,7 +32,7 @@ public class AccountServiceImpl implements AccountService {
 		account.setId(accountNumber);
 		Customer customer = new Customer(customerName);
 		account.setCustomer(customer);
-		System.out.println("Service, Account: " + account);
+//		System.out.println("Service, Account: " + account);
 		accountRepository.save(account);
 		logger.log("createAccount with parameters accountNumber= "+accountNumber+" , customerName= "+customerName);
 		return AccountAdapter.getAccountDTOFromAccount(account);
@@ -43,7 +43,7 @@ public class AccountServiceImpl implements AccountService {
 		if (account == null) {
 			throw new IllegalArgumentException("Account with accountNumber " + accountNumber + " not found.");
 		}
-		System.out.println("entries: " + account.getEntryList());
+//		System.out.println("entries: " + account.getEntryList());
 		if (Objects.nonNull(account)) {
 			account.deposit(amount);
 			accountRepository.save(account);

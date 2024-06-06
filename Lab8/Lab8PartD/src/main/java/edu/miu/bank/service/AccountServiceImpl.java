@@ -29,7 +29,7 @@ public class AccountServiceImpl implements AccountService {
 
 	public AccountDTO createAccount(long accountNumber, String customerName) {
 		Account account = new Account();
-		account.setAccountNumber(accountNumber);
+		account.setId(accountNumber);
 		Customer customer = new Customer(customerName);
 		account.setCustomer(customer);
 		System.out.println("Service, Account: " + account);
@@ -40,6 +40,10 @@ public class AccountServiceImpl implements AccountService {
 
 	public void deposit(long accountNumber, double amount) {
 		Account account = accountRepository.findById(accountNumber).orElse(null);
+		if (account == null) {
+			throw new IllegalArgumentException("Account with accountNumber " + accountNumber + " not found.");
+		}
+		System.out.println("entries: " + account.getEntryList());
 		if (Objects.nonNull(account)) {
 			account.deposit(amount);
 			accountRepository.save(account);

@@ -1,32 +1,33 @@
 package edu.miu.bank.domain;
 
 import jakarta.persistence.*;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
-@Entity
+@Document
 public class Account {
 	@Id
-	long accountNumber;
+	long id;
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JoinColumn(name = "account_number")
+//	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//	@JoinColumn(name = "account_number")
 	Collection<AccountEntry> entryList = new ArrayList<AccountEntry>();
 
-	@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+//	@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
 	Customer customer;
 
 	public Account() {
 	}
 
-	public long getAccountNumber() {
-		return accountNumber;
+	public long getId() {
+		return id;
 	}
 
-	public void setAccountNumber(long accountNumber) {
-		this.accountNumber = accountNumber;
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public double getBalance() {
@@ -52,8 +53,8 @@ public class Account {
 	}
 
 	public void transferFunds(Account toAccount, double amount, String description){
-		AccountEntry fromEntry = new AccountEntry(new Date(), -amount, description, ""+toAccount.getAccountNumber(), toAccount.getCustomer().getName());
-		AccountEntry toEntry = new AccountEntry(new Date(), amount, description, ""+toAccount.getAccountNumber(), toAccount.getCustomer().getName());
+		AccountEntry fromEntry = new AccountEntry(new Date(), -amount, description, ""+toAccount.getId(), toAccount.getCustomer().getName());
+		AccountEntry toEntry = new AccountEntry(new Date(), amount, description, ""+toAccount.getId(), toAccount.getCustomer().getName());
 		entryList.add(fromEntry);	
 		toAccount.addEntry(toEntry);
 	}
@@ -77,7 +78,7 @@ public class Account {
 	@Override
 	public String toString() {
 		return "Account{" +
-				"accountNumber=" + accountNumber +
+				"accountNumber=" + id +
 				", entryList=" + entryList +
 				", customer=" + customer +
 				'}';

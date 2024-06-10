@@ -1,8 +1,9 @@
 package edu.miu.bank.integration.jms;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class JMSMessage {
+public class JMSMessage implements Serializable {
     private LocalDateTime timestamp;
     private String message;
     public JMSMessage(String message) {

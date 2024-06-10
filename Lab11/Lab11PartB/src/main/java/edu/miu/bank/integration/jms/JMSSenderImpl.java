@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Component
 public class JMSSenderImpl implements JMSSender{
 	@Autowired
@@ -13,15 +16,8 @@ public class JMSSenderImpl implements JMSSender{
 	
 	public void sendJMSMessage (String text){
 		JMSMessage message = new JMSMessage(text);
-		ObjectMapper objectMapper = new ObjectMapper();
-		String messageAsString;
-        try {
-			messageAsString  = objectMapper.writeValueAsString(message);
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
-		jmsTemplate.send("taxQueue", session -> session.createTextMessage(messageAsString));
-        System.out.println("JMSSender: sending JMS message ="+text);
+		//jmsTemplate.convertAndSend("taxQueue",message);
+		jmsTemplate.convertAndSend("taxQueue",text);
 	}
 
 }

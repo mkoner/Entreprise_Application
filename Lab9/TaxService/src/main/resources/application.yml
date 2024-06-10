@@ -5,3 +5,7 @@ spring:
     broker-url: tcp://localhost:61616
     user: admin
     password: admin
+    packages:
+      trusted: lab.taxservice
+server:
+  port: 1010

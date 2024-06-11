@@ -45,3 +45,8 @@ logging:
         bank: INFO
   file:
     name: D:/EA/Lab/Lab13/logs.log
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

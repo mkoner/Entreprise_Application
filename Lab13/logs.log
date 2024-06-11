@@ -89,3 +89,159 @@
 2024-06-11T00:35:41.797-05:00  INFO 6432 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
 2024-06-11T00:35:41.807-05:00  INFO 6432 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
 2024-06-11T00:35:41.823-05:00  INFO 6432 --- [main] e.m.bank.integration.logging.LoggerImpl  : transferFunds with parameters fromAccountNumber= 4253892 , toAccountNumber= 1263862 , amount= 100.0 , description= payment of invoice 10232
+2024-06-11T00:41:45.880-05:00  INFO 808 --- [main] edu.miu.bank.Lab2PartCApplication        : Starting Lab2PartCApplication using Java 22.0.1 with PID 808 (D:\EA\Lab\Lab13\Lab13PartA\target\classes started by mkoner in D:\EA\Lab\Lab13\Lab13PartA)
+2024-06-11T00:41:45.883-05:00  INFO 808 --- [main] edu.miu.bank.Lab2PartCApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T00:41:52.508-05:00  INFO 808 --- [main] edu.miu.bank.Lab2PartCApplication        : Started Lab2PartCApplication in 7.845 seconds (process running for 8.978)
+2024-06-11T00:41:52.556-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:41:52.650-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 1263862 , customerName= Frank Brown
+2024-06-11T00:41:52.657-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:41:52.660-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 4253892 , customerName= John Doe
+2024-06-11T00:41:52.663-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:41:52.695-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:41:52.700-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 240.0
+2024-06-11T00:41:52.703-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:41:52.707-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:41:52.710-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 529.0
+2024-06-11T00:41:52.712-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:41:52.719-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:41:52.724-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : withdrawEuros with parameters accountNumber= 1263862 , amount= 230.0
+2024-06-11T00:41:52.726-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:41:52.731-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:41:52.736-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 4253892 , amount= 12450.0
+2024-06-11T00:41:53.120-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : JMS message sent: Deposit of $ 12450.0 to account with accountNumber= 4253892
+2024-06-11T00:41:53.122-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:41:53.126-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:41:53.130-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : depositEuros with parameters accountNumber= 4253892 , amount= 200.0
+2024-06-11T00:41:53.132-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:41:53.138-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:41:53.141-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:41:53.144-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:41:53.151-05:00  INFO 808 --- [main] e.m.bank.integration.logging.LoggerImpl  : transferFunds with parameters fromAccountNumber= 4253892 , toAccountNumber= 1263862 , amount= 100.0 , description= payment of invoice 10232
+2024-06-11T00:44:55.802-05:00  INFO 16968 --- [main] edu.miu.bank.Lab2PartCApplication        : Starting Lab2PartCApplication using Java 22.0.1 with PID 16968 (D:\EA\Lab\Lab13\Lab13PartA\target\classes started by mkoner in D:\EA\Lab\Lab13\Lab13PartA)
+2024-06-11T00:44:55.805-05:00  INFO 16968 --- [main] edu.miu.bank.Lab2PartCApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T00:45:00.962-05:00  INFO 16968 --- [main] edu.miu.bank.Lab2PartCApplication        : Started Lab2PartCApplication in 5.698 seconds (process running for 6.392)
+2024-06-11T00:45:01.011-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:45:01.100-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 1263862 , customerName= Frank Brown
+2024-06-11T00:45:01.108-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:45:01.112-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 4253892 , customerName= John Doe
+2024-06-11T00:45:01.116-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:45:01.150-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:45:01.157-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 240.0
+2024-06-11T00:45:01.159-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:45:01.164-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:45:01.170-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 529.0
+2024-06-11T00:45:01.173-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:45:01.180-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:45:01.189-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : withdrawEuros with parameters accountNumber= 1263862 , amount= 230.0
+2024-06-11T00:45:01.204-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:45:01.211-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:45:01.218-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 4253892 , amount= 12450.0
+2024-06-11T00:45:01.490-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : JMS message sent: Deposit of $ 12450.0 to account with accountNumber= 4253892
+2024-06-11T00:45:01.495-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:45:01.497-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:45:01.500-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : depositEuros with parameters accountNumber= 4253892 , amount= 200.0
+2024-06-11T00:45:01.502-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:45:01.505-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:45:01.508-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:45:01.511-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:45:01.515-05:00  INFO 16968 --- [main] e.m.bank.integration.logging.LoggerImpl  : transferFunds with parameters fromAccountNumber= 4253892 , toAccountNumber= 1263862 , amount= 100.0 , description= payment of invoice 10232
+2024-06-11T00:45:58.880-05:00  INFO 5928 --- [main] edu.miu.bank.Lab2PartCApplication        : Starting Lab2PartCApplication using Java 22.0.1 with PID 5928 (D:\EA\Lab\Lab13\Lab13PartA\target\classes started by mkoner in D:\EA\Lab\Lab13\Lab13PartA)
+2024-06-11T00:45:58.882-05:00  INFO 5928 --- [main] edu.miu.bank.Lab2PartCApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T00:45:59.259-05:00 ERROR 5928 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [edu.miu.bank.Lab2PartCApplication]: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.8.jar:6.1.8]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:417) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at edu.miu.bank.Lab2PartCApplication.main(Lab2PartCApplication.java:30) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.3.0.jar:3.3.0]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.8.jar:6.1.8]
+	... 18 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Value must only contain valid chars
+	at org.springframework.util.Assert.isTrue(Assert.java:111) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.boot.actuate.endpoint.EndpointId.<init>(EndpointId.java:58) ~[spring-boot-actuator-3.3.0.jar:3.3.0]
+	at org.springframework.boot.actuate.endpoint.EndpointId.fromPropertyValue(EndpointId.java:146) ~[spring-boot-actuator-3.3.0.jar:3.3.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter$EndpointPatterns.<init>(IncludeExcludeEndpointFilter.java:165) ~[spring-boot-actuator-autoconfigure-3.3.0.jar:3.3.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:91) ~[spring-boot-actuator-autoconfigure-3.3.0.jar:3.3.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:64) ~[spring-boot-actuator-autoconfigure-3.3.0.jar:3.3.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition$ExposureFilter.<init>(OnAvailableEndpointCondition.java:180) ~[spring-boot-actuator-autoconfigure-3.3.0.jar:3.3.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getExposureFilters(OnAvailableEndpointCondition.java:168) ~[spring-boot-actuator-autoconfigure-3.3.0.jar:3.3.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:117) ~[spring-boot-actuator-autoconfigure-3.3.0.jar:3.3.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:74) ~[spring-boot-actuator-autoconfigure-3.3.0.jar:3.3.0]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.3.0.jar:3.3.0]
+	... 21 common frames omitted
+
+2024-06-11T00:47:01.600-05:00  INFO 11044 --- [main] edu.miu.bank.Lab2PartCApplication        : Starting Lab2PartCApplication using Java 22.0.1 with PID 11044 (D:\EA\Lab\Lab13\Lab13PartA\target\classes started by mkoner in D:\EA\Lab\Lab13\Lab13PartA)
+2024-06-11T00:47:01.603-05:00  INFO 11044 --- [main] edu.miu.bank.Lab2PartCApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T00:47:07.484-05:00  INFO 11044 --- [main] edu.miu.bank.Lab2PartCApplication        : Started Lab2PartCApplication in 6.404 seconds (process running for 7.17)
+2024-06-11T00:47:07.537-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:47:07.642-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 1263862 , customerName= Frank Brown
+2024-06-11T00:47:07.649-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:47:07.653-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 4253892 , customerName= John Doe
+2024-06-11T00:47:07.658-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:47:07.693-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:47:07.702-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 240.0
+2024-06-11T00:47:07.705-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:47:07.712-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:47:07.718-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 529.0
+2024-06-11T00:47:07.720-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:47:07.732-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:47:07.737-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : withdrawEuros with parameters accountNumber= 1263862 , amount= 230.0
+2024-06-11T00:47:07.741-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:47:07.749-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:47:07.756-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 4253892 , amount= 12450.0
+2024-06-11T00:47:08.068-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : JMS message sent: Deposit of $ 12450.0 to account with accountNumber= 4253892
+2024-06-11T00:47:08.071-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:47:08.074-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:47:08.077-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : depositEuros with parameters accountNumber= 4253892 , amount= 200.0
+2024-06-11T00:47:08.080-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:47:08.082-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:47:08.085-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:47:08.088-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:47:08.094-05:00  INFO 11044 --- [main] e.m.bank.integration.logging.LoggerImpl  : transferFunds with parameters fromAccountNumber= 4253892 , toAccountNumber= 1263862 , amount= 100.0 , description= payment of invoice 10232
+2024-06-11T00:48:17.593-05:00  INFO 11748 --- [main] edu.miu.bank.Lab2PartCApplication        : Starting Lab2PartCApplication using Java 22.0.1 with PID 11748 (D:\EA\Lab\Lab13\Lab13PartA\target\classes started by mkoner in D:\EA\Lab\Lab13\Lab13PartA)
+2024-06-11T00:48:17.596-05:00  INFO 11748 --- [main] edu.miu.bank.Lab2PartCApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T00:48:22.708-05:00  INFO 11748 --- [main] edu.miu.bank.Lab2PartCApplication        : Started Lab2PartCApplication in 5.656 seconds (process running for 6.353)
+2024-06-11T00:48:22.757-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:48:22.835-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 1263862 , customerName= Frank Brown
+2024-06-11T00:48:22.840-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:48:22.843-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 4253892 , customerName= John Doe
+2024-06-11T00:48:22.846-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:48:22.875-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:48:22.882-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 240.0
+2024-06-11T00:48:22.883-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:48:22.888-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:48:22.891-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 529.0
+2024-06-11T00:48:22.892-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:48:22.898-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:48:22.901-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : withdrawEuros with parameters accountNumber= 1263862 , amount= 230.0
+2024-06-11T00:48:22.902-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:48:22.906-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:48:22.908-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 4253892 , amount= 12450.0
+2024-06-11T00:48:23.142-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : JMS message sent: Deposit of $ 12450.0 to account with accountNumber= 4253892
+2024-06-11T00:48:23.144-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:48:23.146-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:48:23.149-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : depositEuros with parameters accountNumber= 4253892 , amount= 200.0
+2024-06-11T00:48:23.152-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:48:23.154-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T00:48:23.157-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:48:23.160-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T00:48:23.165-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : transferFunds with parameters fromAccountNumber= 4253892 , toAccountNumber= 1263862 , amount= 100.0 , description= payment of invoice 10232

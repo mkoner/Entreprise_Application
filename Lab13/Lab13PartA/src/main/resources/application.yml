@@ -40,3 +40,8 @@ logging:
     root: ERROR
     org:
       springframework: ERROR
+    edu:
+      miu:
+        bank: INFO
+  file:
+    name: D:/EA/Lab/Lab13/logs.log

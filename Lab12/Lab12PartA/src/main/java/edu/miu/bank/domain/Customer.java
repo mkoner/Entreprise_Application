@@ -1,6 +1,13 @@
 package edu.miu.bank.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class Customer {
+	@Id
+	@GeneratedValue
 	private int id;
 
 	private String name;

@@ -6,6 +6,8 @@ import edu.miu.bank.integration.jms.JMSSender;
 import edu.miu.bank.integration.logging.Logger;
 import edu.miu.bank.repository.AccountRepository;
 import edu.miu.bank.service.dto.AccountDTO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,6 +21,8 @@ public class AccountServiceImpl implements AccountService {
 	private CurrencyConverter currencyConverter;
 	private JMSSender jmsSender;
 	private Logger logger;
+	@Autowired
+	private ApplicationEventPublisher publisher;
 	
 	public AccountServiceImpl(AccountRepository accountRepository, CurrencyConverter currencyConverter, JMSSender jmsSender, Logger logger) {
 		this.accountRepository = accountRepository;

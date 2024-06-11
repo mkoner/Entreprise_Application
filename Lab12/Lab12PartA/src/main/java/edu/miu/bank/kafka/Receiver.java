@@ -9,22 +9,22 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class Receiver {
-    @Autowired
-    AccountService accountService;
-    @KafkaListener(topics = {"new-account"})
-    public void newAccountReceiver(@Payload CreateAccountParam param) {
-        System.out.println("new account received: " + param);
-        accountService.createAccount(param.getAccountNumber(), param.getCustomerName());
-    }
-    @KafkaListener(topics = {"new-transaction"})
-    public void newTransactionReceiver(@Payload TransactionParam param) {
-        System.out.println("new transaction received: " + param);
-        switch (param.getType()) {
-            case DEPOSIT -> accountService.deposit(param.getTo(), param.getAmount());
-            case WITHDRAW -> accountService.withdraw(param.getTo(), param.getAmount());
-            case TRANSFER -> accountService.transferFunds(param.getFrom(), param.getTo(),
-                    param.getAmount(), param.getDescription());
-        }
-    }
+//    @Autowired
+//    AccountService accountService;
+//    @KafkaListener(topics = {"new-account"})
+//    public void newAccountReceiver(@Payload CreateAccountParam param) {
+//        System.out.println("new account received: " + param);
+//        accountService.createAccount(param.getAccountNumber(), param.getCustomerName());
+//    }
+//    @KafkaListener(topics = {"new-transaction"})
+//    public void newTransactionReceiver(@Payload TransactionParam param) {
+//        System.out.println("new transaction received: " + param);
+//        switch (param.getType()) {
+//            case DEPOSIT -> accountService.deposit(param.getTo(), param.getAmount());
+//            case WITHDRAW -> accountService.withdraw(param.getTo(), param.getAmount());
+//            case TRANSFER -> accountService.transferFunds(param.getFrom(), param.getTo(),
+//                    param.getAmount(), param.getDescription());
+//        }
+//    }
 
 }

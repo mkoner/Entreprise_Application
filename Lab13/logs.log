@@ -245,3 +245,403 @@ Caused by: java.lang.IllegalArgumentException: Value must only contain valid cha
 2024-06-11T00:48:23.157-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
 2024-06-11T00:48:23.160-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
 2024-06-11T00:48:23.165-05:00  INFO 11748 --- [main] e.m.bank.integration.logging.LoggerImpl  : transferFunds with parameters fromAccountNumber= 4253892 , toAccountNumber= 1263862 , amount= 100.0 , description= payment of invoice 10232
+2024-06-11T14:11:31.651-05:00  INFO 5948 --- [main] edu.miu.bank.Lab2PartCApplication        : Starting Lab2PartCApplication using Java 22.0.1 with PID 5948 (D:\EA\Lab\Lab12\Lab12PartA\target\classes started by mkoner in D:\EA\Lab\Lab12\Lab12PartA)
+2024-06-11T14:11:31.654-05:00  INFO 5948 --- [main] edu.miu.bank.Lab2PartCApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:11:39.711-05:00  INFO 5948 --- [main] edu.miu.bank.Lab2PartCApplication        : Started Lab2PartCApplication in 8.823 seconds (process running for 10.322)
+2024-06-11T14:11:39.732-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:11:39.847-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 1263862 , customerName= Frank Brown
+2024-06-11T14:11:39.886-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:11:39.895-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 4253892 , customerName= John Doe
+2024-06-11T14:11:39.903-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:11:39.921-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:11:39.942-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 240.0
+2024-06-11T14:11:39.975-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:11:39.990-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:11:40.006-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 529.0
+2024-06-11T14:11:40.021-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:11:40.039-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:11:40.041-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : withdrawEuros with parameters accountNumber= 1263862 , amount= 230.0
+2024-06-11T14:11:40.053-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:11:40.057-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:11:40.059-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 4253892 , amount= 12450.0
+2024-06-11T14:11:40.243-05:00  INFO 5948 --- [main] e.m.bank.integration.logging.LoggerImpl  : JMS message sent: Deposit of $ 12450.0 to account with accountNumber= 4253892
+2024-06-11T14:11:40.284-05:00 ERROR 5948 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing
+	at org.springframework.jms.support.JmsUtils.convertJmsAccessException(JmsUtils.java:312) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.support.JmsAccessor.convertJmsAccessException(JmsAccessor.java:199) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:533) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.send(JmsTemplate.java:610) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.convertAndSend(JmsTemplate.java:687) ~[spring-jms-6.1.8.jar:6.1.8]
+	at edu.miu.bank.integration.jms.JMSSenderImpl.sendJMSMessage(JMSSenderImpl.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.8.jar:6.1.8]
+	at edu.miu.bank.integration.jms.JMSSenderImpl$$SpringCGLIB$$0.sendJMSMessage(<generated>) ~[classes/:na]
+	at edu.miu.bank.service.AccountServiceImpl.deposit(AccountServiceImpl.java:52) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.1.8.jar:6.1.8]
+	at edu.miu.bank.integration.tracing.TimerAspect.duration(TimerAspect.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.8.jar:6.1.8]
+	at edu.miu.bank.service.AccountServiceImpl$$SpringCGLIB$$0.deposit(<generated>) ~[classes/:na]
+	at edu.miu.bank.Lab2PartCApplication.run(Lab2PartCApplication.java:48) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.3.0.jar:3.3.0]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:557) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:611) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at edu.miu.bank.Lab2PartCApplication.main(Lab2PartCApplication.java:32) ~[classes/:na]
+Caused by: jakarta.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused: getsockopt
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:423) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:353) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.ActiveMQConnectionFactory.createConnection(ActiveMQConnectionFactory.java:245) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.springframework.jms.connection.SingleConnectionFactory.doCreateConnection(SingleConnectionFactory.java:452) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.connection.SingleConnectionFactory.initConnection(SingleConnectionFactory.java:414) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.connection.SingleConnectionFactory.getConnection(SingleConnectionFactory.java:328) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.connection.SingleConnectionFactory.createConnection(SingleConnectionFactory.java:243) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.support.JmsAccessor.createConnection(JmsAccessor.java:211) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.access$000(JmsTemplate.java:93) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate$JmsTemplateResourceFactory.createConnection(JmsTemplate.java:1209) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.connection.ConnectionFactoryUtils.doGetTransactionalSession(ConnectionFactoryUtils.java:324) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:514) ~[spring-jms-6.1.8.jar:6.1.8]
+	... 64 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:752) ~[na:na]
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:172) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:403) ~[activemq-client-6.1.2.jar:6.1.2]
+	... 75 common frames omitted
+
+2024-06-11T14:12:50.545-05:00  INFO 10772 --- [main] edu.miu.bank.Lab2PartCApplication        : Starting Lab2PartCApplication using Java 22.0.1 with PID 10772 (D:\EA\Lab\Lab12\Lab12PartA\target\classes started by mkoner in D:\EA\Lab\Lab12\Lab12PartA)
+2024-06-11T14:12:50.547-05:00  INFO 10772 --- [main] edu.miu.bank.Lab2PartCApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:12:58.353-05:00  INFO 10772 --- [main] edu.miu.bank.Lab2PartCApplication        : Started Lab2PartCApplication in 8.593 seconds (process running for 9.622)
+2024-06-11T14:12:58.372-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:12:58.463-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 1263862 , customerName= Frank Brown
+2024-06-11T14:12:58.500-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:12:58.507-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 4253892 , customerName= John Doe
+2024-06-11T14:12:58.514-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:12:58.525-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:12:58.533-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 240.0
+2024-06-11T14:12:58.548-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:12:58.557-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:12:58.569-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 529.0
+2024-06-11T14:12:58.585-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:12:58.601-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:12:58.606-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : withdrawEuros with parameters accountNumber= 1263862 , amount= 230.0
+2024-06-11T14:12:58.626-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:12:58.631-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:12:58.638-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 4253892 , amount= 12450.0
+2024-06-11T14:12:58.860-05:00  INFO 10772 --- [main] e.m.bank.integration.logging.LoggerImpl  : JMS message sent: Deposit of $ 12450.0 to account with accountNumber= 4253892
+2024-06-11T14:12:58.893-05:00 ERROR 10772 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing
+	at org.springframework.jms.support.JmsUtils.convertJmsAccessException(JmsUtils.java:312) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.support.JmsAccessor.convertJmsAccessException(JmsAccessor.java:199) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:533) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.send(JmsTemplate.java:610) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.convertAndSend(JmsTemplate.java:687) ~[spring-jms-6.1.8.jar:6.1.8]
+	at edu.miu.bank.integration.jms.JMSSenderImpl.sendJMSMessage(JMSSenderImpl.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.8.jar:6.1.8]
+	at edu.miu.bank.integration.jms.JMSSenderImpl$$SpringCGLIB$$0.sendJMSMessage(<generated>) ~[classes/:na]
+	at edu.miu.bank.service.AccountServiceImpl.deposit(AccountServiceImpl.java:52) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.1.8.jar:6.1.8]
+	at edu.miu.bank.integration.tracing.TimerAspect.duration(TimerAspect.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.8.jar:6.1.8]
+	at edu.miu.bank.service.AccountServiceImpl$$SpringCGLIB$$0.deposit(<generated>) ~[classes/:na]
+	at edu.miu.bank.Lab2PartCApplication.run(Lab2PartCApplication.java:48) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.3.0.jar:3.3.0]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:557) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:611) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at edu.miu.bank.Lab2PartCApplication.main(Lab2PartCApplication.java:32) ~[classes/:na]
+Caused by: jakarta.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused: getsockopt
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:423) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:353) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.ActiveMQConnectionFactory.createConnection(ActiveMQConnectionFactory.java:245) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.springframework.jms.connection.SingleConnectionFactory.doCreateConnection(SingleConnectionFactory.java:452) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.connection.SingleConnectionFactory.initConnection(SingleConnectionFactory.java:414) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.connection.SingleConnectionFactory.getConnection(SingleConnectionFactory.java:328) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.connection.SingleConnectionFactory.createConnection(SingleConnectionFactory.java:243) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.support.JmsAccessor.createConnection(JmsAccessor.java:211) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.access$000(JmsTemplate.java:93) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate$JmsTemplateResourceFactory.createConnection(JmsTemplate.java:1209) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.connection.ConnectionFactoryUtils.doGetTransactionalSession(ConnectionFactoryUtils.java:324) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:514) ~[spring-jms-6.1.8.jar:6.1.8]
+	... 64 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:752) ~[na:na]
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:172) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:403) ~[activemq-client-6.1.2.jar:6.1.2]
+	... 75 common frames omitted
+
+2024-06-11T14:15:35.244-05:00  INFO 6132 --- [main] edu.miu.bank.Lab2PartCApplication        : Starting Lab2PartCApplication using Java 22.0.1 with PID 6132 (D:\EA\Lab\Lab12\Lab12PartA\target\classes started by mkoner in D:\EA\Lab\Lab12\Lab12PartA)
+2024-06-11T14:15:35.248-05:00  INFO 6132 --- [main] edu.miu.bank.Lab2PartCApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:15:42.551-05:00  INFO 6132 --- [main] edu.miu.bank.Lab2PartCApplication        : Started Lab2PartCApplication in 8.07 seconds (process running for 9.116)
+2024-06-11T14:15:42.570-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:15:42.665-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 1263862 , customerName= Frank Brown
+2024-06-11T14:15:42.698-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:15:42.704-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 4253892 , customerName= John Doe
+2024-06-11T14:15:42.711-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:15:42.722-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:15:42.732-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 240.0
+2024-06-11T14:15:42.757-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:15:42.775-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:15:42.791-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 529.0
+2024-06-11T14:15:42.810-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:15:42.825-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:15:42.829-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : withdrawEuros with parameters accountNumber= 1263862 , amount= 230.0
+2024-06-11T14:15:42.847-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:15:42.856-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:15:42.859-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 4253892 , amount= 12450.0
+2024-06-11T14:15:43.094-05:00  INFO 6132 --- [main] e.m.bank.integration.logging.LoggerImpl  : JMS message sent: Deposit of $ 12450.0 to account with accountNumber= 4253892
+2024-06-11T14:15:43.114-05:00 ERROR 6132 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing
+	at org.springframework.jms.support.JmsUtils.convertJmsAccessException(JmsUtils.java:312) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.support.JmsAccessor.convertJmsAccessException(JmsAccessor.java:199) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:533) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.send(JmsTemplate.java:610) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.convertAndSend(JmsTemplate.java:687) ~[spring-jms-6.1.8.jar:6.1.8]
+	at edu.miu.bank.integration.jms.JMSSenderImpl.sendJMSMessage(JMSSenderImpl.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.8.jar:6.1.8]
+	at edu.miu.bank.integration.jms.JMSSenderImpl$$SpringCGLIB$$0.sendJMSMessage(<generated>) ~[classes/:na]
+	at edu.miu.bank.service.AccountServiceImpl.deposit(AccountServiceImpl.java:52) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.1.8.jar:6.1.8]
+	at edu.miu.bank.integration.tracing.TimerAspect.duration(TimerAspect.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.8.jar:6.1.8]
+	at edu.miu.bank.service.AccountServiceImpl$$SpringCGLIB$$0.deposit(<generated>) ~[classes/:na]
+	at edu.miu.bank.Lab2PartCApplication.run(Lab2PartCApplication.java:48) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.3.0.jar:3.3.0]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:557) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:611) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:342) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at edu.miu.bank.Lab2PartCApplication.main(Lab2PartCApplication.java:32) ~[classes/:na]
+Caused by: jakarta.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused: getsockopt
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:423) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:353) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.ActiveMQConnectionFactory.createConnection(ActiveMQConnectionFactory.java:245) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.springframework.jms.connection.SingleConnectionFactory.doCreateConnection(SingleConnectionFactory.java:452) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.connection.SingleConnectionFactory.initConnection(SingleConnectionFactory.java:414) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.connection.SingleConnectionFactory.getConnection(SingleConnectionFactory.java:328) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.connection.SingleConnectionFactory.createConnection(SingleConnectionFactory.java:243) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.support.JmsAccessor.createConnection(JmsAccessor.java:211) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.access$000(JmsTemplate.java:93) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate$JmsTemplateResourceFactory.createConnection(JmsTemplate.java:1209) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.connection.ConnectionFactoryUtils.doGetTransactionalSession(ConnectionFactoryUtils.java:324) ~[spring-jms-6.1.8.jar:6.1.8]
+	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:514) ~[spring-jms-6.1.8.jar:6.1.8]
+	... 64 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:752) ~[na:na]
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:525) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:488) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:172) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:52) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:64) ~[activemq-client-6.1.2.jar:6.1.2]
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:403) ~[activemq-client-6.1.2.jar:6.1.2]
+	... 75 common frames omitted
+
+2024-06-11T14:17:22.426-05:00  INFO 19932 --- [main] edu.miu.bank.Lab2PartCApplication        : Starting Lab2PartCApplication using Java 22.0.1 with PID 19932 (D:\EA\Lab\Lab12\Lab12PartA\target\classes started by mkoner in D:\EA\Lab\Lab12\Lab12PartA)
+2024-06-11T14:17:22.429-05:00  INFO 19932 --- [main] edu.miu.bank.Lab2PartCApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:17:29.510-05:00  INFO 19932 --- [main] edu.miu.bank.Lab2PartCApplication        : Started Lab2PartCApplication in 7.758 seconds (process running for 8.961)
+2024-06-11T14:17:29.530-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:17:29.626-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 1263862 , customerName= Frank Brown
+2024-06-11T14:17:29.681-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:17:29.690-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 4253892 , customerName= John Doe
+2024-06-11T14:17:29.702-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:17:29.728-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:17:29.750-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 240.0
+2024-06-11T14:17:29.784-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:17:29.805-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:17:29.817-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 529.0
+2024-06-11T14:17:29.835-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:17:29.848-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:17:29.850-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : withdrawEuros with parameters accountNumber= 1263862 , amount= 230.0
+2024-06-11T14:17:29.858-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:17:29.862-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:17:29.863-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 4253892 , amount= 12450.0
+2024-06-11T14:17:29.870-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : JMS message sent: Deposit of $ 12450.0 to account with accountNumber= 4253892
+2024-06-11T14:17:29.877-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:17:29.882-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:17:29.885-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : depositEuros with parameters accountNumber= 4253892 , amount= 200.0
+2024-06-11T14:17:29.896-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:17:29.899-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:17:29.910-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:17:29.911-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:17:29.917-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : transferFunds with parameters fromAccountNumber= 4253892 , toAccountNumber= 1263862 , amount= 100.0 , description= payment of invoice 10232

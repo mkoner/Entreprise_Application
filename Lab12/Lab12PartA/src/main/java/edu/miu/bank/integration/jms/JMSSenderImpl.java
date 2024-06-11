@@ -11,13 +11,14 @@ import java.util.Map;
 
 @Component
 public class JMSSenderImpl implements JMSSender{
-	@Autowired
-	JmsTemplate jmsTemplate;
+//	@Autowired
+//	JmsTemplate jmsTemplate;
 	
 	public void sendJMSMessage (String text){
-		JMSMessage message = new JMSMessage(text);
-		//jmsTemplate.convertAndSend("taxQueue",message);
-		jmsTemplate.convertAndSend("taxQueue",text);
+//		JMSMessage message = new JMSMessage(text);
+//		//jmsTemplate.convertAndSend("taxQueue",message);
+//		jmsTemplate.convertAndSend("taxQueue",text);
+		System.out.println("Sending message: "+ text);
 	}
 
 }

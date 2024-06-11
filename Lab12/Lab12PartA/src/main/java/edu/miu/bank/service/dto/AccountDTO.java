@@ -53,4 +53,20 @@ public class AccountDTO {
                 ", accountEntries=" + accountEntries +
                 '}';
     }
+
+    public void printStatement(){
+        System.out.println("Statement for Account: " + getAccountNumber());
+        System.out.println("Account Holder: " + customer.getName());
+        System.out.println("-Date-------------------------"
+                + "-Description------------------"
+                + "-Amount-------------");
+        for (AccountEntryDTO entry : getAccountEntries()) {
+            System.out.printf("%30s%30s%20.2f\n", entry.getDate()
+                    .toString(), entry.getDescription(), entry.getAmount());
+        }
+        System.out.println("----------------------------------------"
+                + "----------------------------------------");
+        System.out.printf("%30s%30s%20.2f\n\n", "", "Current Balance:",
+                getBalance());
+    }
 }

@@ -1,5 +1,6 @@
 package edu.miu.bank.domain;
 
+import edu.miu.bank.service.dto.AccountEntryDTO;
 import jakarta.persistence.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -7,16 +8,16 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
-@Document
+@Entity
 public class Account {
 	@Id
 	long id;
 
-//	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-//	@JoinColumn(name = "account_number")
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@JoinColumn(name = "account_number")
 	Collection<AccountEntry> entryList = new ArrayList<AccountEntry>();
 
-//	@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+	@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
 	Customer customer;
 
 	public Account() {
@@ -83,4 +84,5 @@ public class Account {
 				", customer=" + customer +
 				'}';
 	}
+
 }

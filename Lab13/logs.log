@@ -645,3 +645,64 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 2024-06-11T14:17:29.910-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
 2024-06-11T14:17:29.911-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
 2024-06-11T14:17:29.917-05:00  INFO 19932 --- [main] e.m.bank.integration.logging.LoggerImpl  : transferFunds with parameters fromAccountNumber= 4253892 , toAccountNumber= 1263862 , amount= 100.0 , description= payment of invoice 10232
+2024-06-11T14:19:52.618-05:00  INFO 17340 --- [main] edu.miu.bank.Lab2PartCApplication        : Starting Lab2PartCApplication using Java 22.0.1 with PID 17340 (D:\EA\Lab\Lab12\Lab12PartA\target\classes started by mkoner in D:\EA\Lab\Lab12\Lab12PartA)
+2024-06-11T14:19:52.621-05:00  INFO 17340 --- [main] edu.miu.bank.Lab2PartCApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:19:59.901-05:00  INFO 17340 --- [main] edu.miu.bank.Lab2PartCApplication        : Started Lab2PartCApplication in 7.888 seconds (process running for 8.881)
+2024-06-11T14:19:59.918-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:20:00.033-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 1263862 , customerName= Frank Brown
+2024-06-11T14:20:00.067-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:20:00.073-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 4253892 , customerName= John Doe
+2024-06-11T14:20:00.081-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:20:00.096-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:20:00.106-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 240.0
+2024-06-11T14:20:00.133-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:20:00.150-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:20:00.158-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 529.0
+2024-06-11T14:20:00.175-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:20:00.187-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:20:00.193-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : withdrawEuros with parameters accountNumber= 1263862 , amount= 230.0
+2024-06-11T14:20:00.206-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:20:00.212-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:20:00.214-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 4253892 , amount= 12450.0
+2024-06-11T14:20:00.221-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : JMS message sent: Deposit of $ 12450.0 to account with accountNumber= 4253892
+2024-06-11T14:20:00.228-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:20:00.232-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:20:00.234-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : depositEuros with parameters accountNumber= 4253892 , amount= 200.0
+2024-06-11T14:20:00.242-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:20:00.244-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:20:00.251-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:20:00.252-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:20:00.256-05:00  INFO 17340 --- [main] e.m.bank.integration.logging.LoggerImpl  : transferFunds with parameters fromAccountNumber= 4253892 , toAccountNumber= 1263862 , amount= 100.0 , description= payment of invoice 10232
+2024-06-11T14:57:30.415-05:00  INFO 25108 --- [main] edu.miu.bank.Lab2PartCApplication        : Starting Lab2PartCApplication using Java 22.0.1 with PID 25108 (D:\EA\Lab\Lab12\Lab12PartA\target\classes started by mkoner in D:\EA\Lab\Lab12\Lab12PartA)
+2024-06-11T14:57:30.418-05:00  INFO 25108 --- [main] edu.miu.bank.Lab2PartCApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:57:38.449-05:00  INFO 25108 --- [main] edu.miu.bank.Lab2PartCApplication        : Started Lab2PartCApplication in 8.802 seconds (process running for 10.063)
+2024-06-11T14:57:38.485-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:57:38.615-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 1263862 , customerName= Frank Brown
+2024-06-11T14:57:38.643-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:57:38.648-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : createAccount with parameters accountNumber= 4253892 , customerName= John Doe
+2024-06-11T14:57:38.654-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:57:38.671-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:57:38.695-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 240.0
+2024-06-11T14:57:38.701-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:57:38.761-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:57:38.768-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:57:38.771-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 1263862 , amount= 529.0
+2024-06-11T14:57:38.772-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:57:38.785-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:57:38.792-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:57:38.792-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : withdrawEuros with parameters accountNumber= 1263862 , amount= 230.0
+2024-06-11T14:57:38.794-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:57:38.800-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:57:38.804-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:57:38.805-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : deposit with parameters accountNumber= 4253892 , amount= 12450.0
+2024-06-11T14:57:38.811-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : JMS message sent: Deposit of $ 12450.0 to account with accountNumber= 4253892
+2024-06-11T14:57:38.812-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:57:38.820-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:57:38.825-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:57:38.827-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : depositEuros with parameters accountNumber= 4253892 , amount= 200.0
+2024-06-11T14:57:38.827-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:57:38.835-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:57:38.837-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: findById
+2024-06-11T14:57:38.843-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:57:38.845-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : Calling Method: save
+2024-06-11T14:57:38.850-05:00  INFO 25108 --- [main] e.m.bank.integration.logging.LoggerImpl  : transferFunds with parameters fromAccountNumber= 4253892 , toAccountNumber= 1263862 , amount= 100.0 , description= payment of invoice 10232

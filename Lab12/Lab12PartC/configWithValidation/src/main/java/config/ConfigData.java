@@ -1,20 +1,14 @@
 package config;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
-import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 
 @Component
 @ConfigurationProperties(prefix = "application")
-@Validated
 public class ConfigData {
-    @NotBlank
     private String name;
-    @NotBlank
     private String version;
     private Server server;
     private User user;
@@ -61,7 +55,6 @@ public class ConfigData {
     }
 
     public static class Server {
-        @NotBlank
         private String url;
         private String name;
 
@@ -85,11 +78,7 @@ public class ConfigData {
     public static class User {
         private String firstname;
         private String lastname;
-        @NotBlank
-        @Size(min = 8, max = 15)
         private String username;
-        @NotBlank
-        @Size(min = 8, max = 15)
         private String password;
 
         public String getFirstname() {

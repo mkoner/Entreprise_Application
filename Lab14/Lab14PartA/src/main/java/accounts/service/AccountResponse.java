@@ -43,4 +43,12 @@ public class AccountResponse {
 		this.accountHolder = accountHolder;
 	}
 
+	@Override
+	public String toString() {
+		return "AccountResponse{" +
+				"accountNumber='" + accountNumber + '\'' +
+				", balance=" + balance +
+				", accountHolder='" + accountHolder + '\'' +
+				'}';
+	}
 }

@@ -50,4 +50,16 @@ public class Account {
 		this.accountHolder = accountHolder;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Account account = (Account) o;
+		return Double.compare(balance, account.balance) == 0 && Objects.equals(accountNumber, account.accountNumber) && Objects.equals(accountHolder, account.accountHolder);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(accountNumber, balance, accountHolder);
+	}
 }
